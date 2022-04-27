@@ -33,7 +33,7 @@ const jsonData = JSON.stringify(data);
 const url = "https://us14.api.mailchimp.com/3.0/lists/c6bcd76840"
 const options ={
   method: "POST",
-  auth: "freda1:06777cf73be9560f186e0d5e11b22735-us14"
+  auth: "freda1:26777cf73be9560f186e0d5e11b22735-us14"
 }
 const request = https.request(url, options, function(response){
   if (response.statusCode === 200) {
@@ -55,7 +55,7 @@ app.post("/failure", function(req, res){
   res.redirect("/");
 })
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT||3000, function(){
   console.log("Server is running on port 3000");
 });
 
